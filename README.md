@@ -1,17 +1,17 @@
 # Collections
-## 1. Queue (FIFO) 
-## 2. Stack (LIFO)
+### 1. Queue (FIFO) 
+### 2. Stack (LIFO)
 
-### Compile
-mkdir build 
+#### Compile
+mkdir build
 cd build
 cmake ..
 make all
 
-### Run Tests
+#### Run Tests
 cd build
 ./test
 
-### Run App
+#### Run App
 cd build
 ./app
