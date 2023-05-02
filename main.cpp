@@ -2,20 +2,20 @@
 
 int main() {
 
-    Queue<int>* q = new Queue<int>();
+    Queue<int> q;
     for(int i = 0; i < 10; i++) {
-        q->addData(i);
+        q.addData(i);
     }
     for(int i = 0; i < 10; i++) {
-        q->get();
+        q.get();
     }
 
-    Stack<int>* s = new Stack<int>();
+    Stack<int> s;
     for(int i = 0; i < 10; i++) {
-        s->addData(i);
+        s.addData(i);
     }
     for(int i = 0; i < 10; i++) {
-        s->get();
+        s.get();
     }
 
     return 0;
