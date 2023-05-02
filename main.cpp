@@ -4,7 +4,7 @@ int main() {
 
     Queue<int> q;
     for(int i = 0; i < 10; i++) {
-        q.addData(i);
+        q.add(i);
     }
     for(int i = 0; i < 10; i++) {
         q.get();
@@ -12,7 +12,7 @@ int main() {
 
     Stack<int> s;
     for(int i = 0; i < 10; i++) {
-        s.addData(i);
+        s.add(i);
     }
     for(int i = 0; i < 10; i++) {
         s.get();

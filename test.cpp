@@ -2,22 +2,22 @@
 #include "collections.cpp"
 
 
-// Queue - addData()
-TEST(Queue, addDataInt) {
+// Queue - add()
+TEST(Queue, addInt) {
     Queue<int> q;
     for(int i = 0; i < 10; i++) {
-        q.addData(i);
+        q.add(i);
     }
     for(int i = 0; i < 10; i++) {
         EXPECT_EQ(q.get(), i);
     }
 }
 
-// Queue - addData()
-TEST(Queue, addDataFloat) {
+// Queue - add()
+TEST(Queue, addFloat) {
     Queue<float> q;
-    q.addData(1.3);
-    q.addData(5.9);
+    q.add(1.3);
+    q.add(5.9);
     EXPECT_FLOAT_EQ(q.get(), 1.3);
     EXPECT_FLOAT_EQ(q.get(), 5.9);
 }
@@ -25,12 +25,12 @@ TEST(Queue, addDataFloat) {
 // Queue - get()
 TEST(Queue, get) {
     Queue<int> q;
-    q.addData(1);
-    q.addData(2);
+    q.add(1);
+    q.add(2);
     EXPECT_EQ(q.get(), 1);
     EXPECT_EQ(q.get(), 2);
     EXPECT_EXIT(q.get(), ::testing::ExitedWithCode(1), "Error: The Queue is Empty.");
-    q.addData(3);
+    q.add(3);
     EXPECT_EQ(q.get(), 3);
     EXPECT_EXIT(q.get(), ::testing::ExitedWithCode(1), "Error: The Queue is Empty.");
 }
@@ -39,7 +39,7 @@ TEST(Queue, get) {
 TEST(Queue, isEmpty) {
     Queue<std::string> q;
     EXPECT_EQ(q.isEmpty(), true);
-    q.addData("one");
+    q.add("one");
     EXPECT_EQ(q.isEmpty(), false);
     q.get();
     EXPECT_EQ(q.isEmpty(), true);
@@ -50,7 +50,7 @@ TEST(Queue, size) {
     Queue<int> q;
     EXPECT_EQ(q.size(), 0);
     for(int i = 0; i < 10; i++) {
-        q.addData(i);
+        q.add(i);
     }
     EXPECT_EQ(q.size(), 10);
     for(int i = 0; i < 5; i++) {
@@ -63,11 +63,11 @@ TEST(Queue, size) {
     EXPECT_EQ(q.size(), 0);
 }
 
-// Stack - addData()
-TEST(Stack, addData) {
+// Stack - add()
+TEST(Stack, add) {
     Stack<int> s;
     for(int i = 0; i < 10; i++) {
-        s.addData(i);
+        s.add(i);
     }
     for(int i = 9; i > -1; i--) {
         EXPECT_EQ(s.get(), i);
@@ -77,13 +77,13 @@ TEST(Stack, addData) {
 // Stack - get()
 TEST(Stack, get) {
     Stack<int>* s = new Stack<int>();
-    s->addData(1);
-    s->addData(2);
+    s->add(1);
+    s->add(2);
     EXPECT_EQ(s->get(), 2);
     EXPECT_EQ(s->get(), 1);
     EXPECT_EXIT(s->get(), ::testing::ExitedWithCode(1), "Error: The Stack is Empty.");
-    s->addData(3);
-    s->addData(4);
+    s->add(3);
+    s->add(4);
     EXPECT_EQ(s->get(), 4);
     EXPECT_EQ(s->get(), 3);
     EXPECT_EXIT(s->get(), ::testing::ExitedWithCode(1), "Error: The Stack is Empty.");
@@ -94,7 +94,7 @@ TEST(Stack, get) {
 TEST(Stack, isEmpty) {
     Queue<std::string> s;
     EXPECT_EQ(s.isEmpty(), true);
-    s.addData("one");
+    s.add("one");
     EXPECT_EQ(s.isEmpty(), false);
     s.get();
     EXPECT_EQ(s.isEmpty(), true);
@@ -105,7 +105,7 @@ TEST(Stack, size) {
     Queue<int> s;
     EXPECT_EQ(s.size(), 0);
     for(int i = 0; i < 10; i++) {
-        s.addData(i);
+        s.add(i);
     }
     EXPECT_EQ(s.size(), 10);
     for(int i = 0; i < 5; i++) {

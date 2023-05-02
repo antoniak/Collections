@@ -41,7 +41,7 @@ public:
 
     
     // Adds an element in the queue.
-    void addData(K x) {
+    void add(K x) {
         Node<K>* node = new Node<K>(x); // create new node
         if(tail == nullptr) { // the queue is empty
             assert((head == nullptr) && (len == 0)); // checks conditions implied by emptyness
@@ -125,7 +125,7 @@ public:
 
     
     // Adds an element in the stack.
-    void addData(K x) {
+    void add(K x) {
         Node<K>* node = new Node<K>(x); // creates a new node     
         if(top == nullptr) { // stack is empty
             assert(len == 0); 
