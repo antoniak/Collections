@@ -35,7 +35,6 @@ TEST(Queue, get) {
     EXPECT_EXIT(q->get(), ::testing::ExitedWithCode(1), "Error: The Queue is Empty.");
 }
 
-
 // Queue - isEmpty()
 TEST(Queue, isEmpty) {
     Queue<std::string>* q = new Queue<std::string>();
@@ -65,7 +64,7 @@ TEST(Queue, size) {
 }
 
 // Stack - addData()
-TEST(Stack, addDataInt) {
+TEST(Stack, addData) {
     Stack<int>* s = new Stack<int>();
     for(int i = 0; i < 10; i++) {
         s->addData(i);
@@ -90,7 +89,6 @@ TEST(Stack, get) {
     EXPECT_EXIT(s->get(), ::testing::ExitedWithCode(1), "Error: The Stack is Empty.");
 }
 
-
 // Stack - isEmpty()
 TEST(Stack, isEmpty) {
     Queue<std::string>* s = new Queue<std::string>();
@@ -100,7 +98,6 @@ TEST(Stack, isEmpty) {
     s->get();
     EXPECT_EQ(s->isEmpty(), true);
 }
-
 
 // Queue - size()
 TEST(Stack, size) {
@@ -119,7 +116,6 @@ TEST(Stack, size) {
     }
     EXPECT_EQ(s->size(), 0);
 }
-
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
