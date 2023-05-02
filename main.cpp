@@ -9,9 +9,6 @@ int main() {
     for(int i = 0; i < 10; i++) {
         q->get();
     }
-    for(int i = 0; i < 10; i++) {
-        q->addData(i);
-    }
 
     Stack<int>* s = new Stack<int>();
     for(int i = 0; i < 10; i++) {
@@ -19,9 +16,6 @@ int main() {
     }
     for(int i = 0; i < 10; i++) {
         s->get();
-    }
-    for(int i = 0; i < 10; i++) {
-        s->addData(i);
     }
 
     return 0;
