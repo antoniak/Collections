@@ -1,12 +1,12 @@
 # Collections
-### 1. Queue (FIFO) 
+### Queue (FIFO) 
 Implements
 * add(x) - adds the element x to the queue
 * get() - removes the next element and returns it
 * isEmpty() - returns whether the queue is empty 
 * size() - returns the queue's size
 
-### 2. Stack (LIFO)
+### Stack (LIFO)
 Implements
 * add(x) - adds the element x to the stack
 * get() - removes the next element and returns it
@@ -20,9 +20,7 @@ cmake ..\
 make all
 
 ### Run Tests
-cd build\
 ./test
 
 ### Run App
-cd build\
 ./app
