@@ -12,7 +12,6 @@ int main() {
     for(int i = 0; i < 10; i++) {
         q->addData(i);
     }
-    delete q;
 
     Stack<int>* s = new Stack<int>();
     for(int i = 0; i < 10; i++) {
@@ -24,7 +23,6 @@ int main() {
     for(int i = 0; i < 10; i++) {
         s->addData(i);
     }
-    delete s;
-    
+
     return 0;
 }
